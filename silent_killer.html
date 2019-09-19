@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ben Lang, Artist and Interaction Designer</title>
+    <meta charset="UTF-8">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../Magnific-Popup-master\dist\magnific-popup.css" rel="stylesheet" type="text/css"> -->
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+
+<body>
+
+    <header>
+        <ul class="nav">
+            <li>
+                    <a href="index.html">
+                            <h1>Ben Lang</h1>
+                        </a>
+                <!-- <h2>Artist and Interaction Designer</h2> -->
+            </li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+    </header>
+
+    <section id="silent_killer" class="project">
+        <img class="feature" src="imgs\silent_killer.jpg">
+
+        <div class="proj-txt">
+            <h3>Silent Killer</h3>
+            <p>Interactive generative art installation, revealing the invisible process of evaporation from the
+                skin’s surface, created with Processing and Microsoft Kinect. The work was produced as part of the
+                Master of Interaction Design and Electronic Art capstone research unit, University of Sydney.</p>
+
+            <p>The work was exhibited twice in 2018: at D18 Grad Show, 29 Nov – 1 Dec, University of Sydney, and
+                Caldera, 29 Nov – 2 Dec, Eveleigh Works – where it also included an industrial fan controlled by an
+                arduino-relay circuit, seamlessly integrating the visualization and air movement.</p>
+        </div>
+
+        <div class="aspect-box feature">
+            <iframe src="https://www.youtube.com/embed/rVTCaSb44D0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="proj-txt">
+
+            <p>It takes inspiration from recent research by Dr Ollie Jay which revealed a complexity of
+                risk-factors in predicting the potential for heat-related stress. Tackling the misconception that
+                temperature is the only indicator, the research sought to reveal practical and potentially life
+                saving techniques. It showed that increasing evaporative potential – by using a fan to increase air
+                flow, or by wetting the skin’s surface – is often the most effective way to avoid heat-related
+                stress. This is especially relevant as heat waves will increase in severity due to climate change.
+                The death toll related to heat waves is often underestimated, provoking the title, “The Silent
+                Killer,” borrowed from a 2016 report by the Climate Council.</p>
+
+            <p>The interactive artwork has been designed as an immersive experience for both exhibition and as part
+                of a performance. It operates as an imaginative model to reveal invisible processes, humbling the
+                participant as they are positioned within a complex and chaotic system that is somewhat beyond their
+                control. The design aims to provoke the realisation of a limited – yet crucial – sense of agency and
+                responsibility in the form of minor interventions for adaptation to unprecedented climatic
+                conditions. The ‘messenger’ then, in the words of performance theorist Carl Lavery, takes the form
+                of “…a sensation, a materiality… a participatory play of movement and light, through a corporeal
+                gesture, a type of thinking, then, done by, between and on bodies” (2016, p. 310). The body and our
+                senses are here framed as an integral aspect of our cognition, supporting knowledge through direct
+                experience.</p>
+
+            <p>A key piece of aesthetic inspiration was Schlieren imaging, a technique using parabolic mirrors to
+                refocus light for the study of aerodynamic effects. The artwork is thus a projection that embeds the
+                effect as an ambient or environmental constant in the same world as the participant, drawing upon
+                the particular qualities of the performance context as a space that promotes reflection and focus.
+                It is the mix of the real and the fantasy which evokes “something which is neither theatre nor film,
+                but partakes of the evanescent reality of dreams” (Virmaux, 1966 cited in Dixon, 2007, p. 337).</p>
+
+            <p>A breakthrough in development came with the adoption of Thomas Diewald’s PixelFlow library,
+                supported by feedback aligning the aesthetic of evaporation with fluid dynamics. This worked nicely
+                in conjunction with KinectPV2 and OpenCV libraries, and optimised the particle rendering with the
+                GPU.</p>
+
+            <p>The first iteration of the project utilised a particle system built in Processing, spawning from a
+                real-time silhouette produced with the Microsoft Kinect. A ‘boundary layer’ was modelled as a force
+                on the skin’s surface, effected by ambient temperature and air flow. The water or sweat ‘particles’
+                undergo a state change from liquid to vapor, releasing energy as ‘heat’ as they “[diffuse] across
+                the boundary layer and into the surrounding air” (Cramer & Jay, 2016).</p>
+
+            <p>The research project drew insights from participant’s subjective experiences, revealing how the
+                aesthetic outcomes influence interpretations. Further development of the prototype may see its
+                inclusion in the Anastasia project, in collaboration with The Living Room Theatre’s artistic
+                director, Michelle St Anne. In this context, it will further explore a blurring of the boundaries
+                between observer and participant, extending the existing nature of The Living Room Theatre’s
+                interactive, intimate, and spatially dynamic productions.</p>
+                <br><br><br><br>
+                <img src="imgs\showcase.jpg">
+            <p>The prototype was exhibited in the MIDEA Showcase, Wilkinson Building, on 27th June 2018.<br><br> </p>
+
+            <h3>REFERENCES</h3>
+            <p>Cramer, M. N., & Jay, O. (2016). Biophysical aspects of human thermoregulation during heat stress.
+                Autonomic Neuroscience, 196, 3-13<br>
+                Dixon, S. (2007). Digital Performance: A History of New Media in Theater, Dance, Performance Art,
+                and Installation. Cambridge, MA: MIT Press.<br>
+                Lavery, C. (2016). Participation, Ecology, Cosmos. Reframing Immersive Theatre: The Politics and
+                Pragmatics of Participatory Performance, 303-315.<br></p>
+
+
+        </div>
+    </section>
+    <hr>
+    <div class="grid-container">
+        <ul class="the-grid">
+            <li><a href="quantum.html"><img src="imgs\quantum.jpg" class="thumbnail"></a></li>
+            <li><a href="silent_killer.html"><img src="imgs\silent_killer.jpg" class="thumbnail"></a></li>
+            <li><a href="mars.html"><img src="imgs\mars.jpg" class="thumbnail"></a></li>
+            <li><a href="yardstick.html"><img src="imgs\yardstick.jpg" class="thumbnail"></a></li>
+            <li><a href="portal.html"><img src="imgs\portal.jpg" class="thumbnail"></a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
