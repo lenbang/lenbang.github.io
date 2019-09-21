@@ -81,12 +81,13 @@ hr {
 }
 
 .feature {
-    margin: 40px auto 40px auto;
+    margin-top: 40px;
 }
 
 .proj-txt {
-    max-width: 600px;
-    margin: auto;
+    max-width: 500px;
+    /* margin: auto; */
+    margin-right: auto;
     padding: 40px 20px 40px 20px;
 }
 
@@ -100,7 +101,7 @@ hr {
 
 .project {
     max-width: 1000px;
-    padding: 80px 20px 0px 20px;
+    /* padding: 80px 20px 0px 20px; */
     margin: auto;
 }
 
