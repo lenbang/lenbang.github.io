@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>5 days in Taipei</title>
+    <meta charset="UTF-8">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="magnific-popup.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+ <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+ integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+ crossorigin=""></script>
+    <link href="taipei.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+
+<body>
+    <!-- load flickr svg -->
+    <svg display="none">
+        <symbol viewBox="0 0 448 512" id="flickr">
+            <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM144.5 319c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5zm159 0c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5z" />
+        </symbol>
+    </svg>
+
+    <header>
+        <ul class="title">
+            <li>
+                <h4>5 days in </h4>
+            </li>
+            <li>
+                <h1>Taipei</h1>
+            </li>
+        </ul>
+        <p class="byline">A photo-journal <br>Web design and photography by Ben Lang<br><a
+                href="https://www.flickr.com/photos/lenbang">
+                <svg width="25" height="25">
+                    <use xlink:href="#flickr" />
+                </svg>
+            </a>
+        </p>
+    </header>
+
+    <div class="main-content">
+
+        <section class="" id="mapid"></section>
+
+        <section class="the-grid">
+            <a href="images\ximen.jpg" title="Ximen" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\ximen.jpg" alt="Ximen"></a>
+            <a href="images\taipei-street-6.jpg" class="thumbnail med portrait photo-grid"><img class="portrait"
+                    src="images\taipei-street-6.jpg" alt="Taipei"></a>
+            <a href="images\tamsui-river.jpg" title="Tamsui River" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\tamsui-river.jpg" alt="Tamsui River"></a>
+            <a href="images\taipei-street-4.jpg" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\taipei-street-4.jpg" alt="Taipei"></a>
+            <a href="images\taipei-street-3.jpg" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-street-3.jpg" alt="Taipei"></a>
+            <a href="images\taipei-street-2.jpg" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-street-2.jpg" alt="Taipei"></a>
+            <a href="images\taipei-street-1.jpg" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-street-1.jpg" alt="Taipei"></a>
+            <a href="images\taipei-street-7.jpg" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-street-7.jpg" alt="Taipei"></a>
+            <a href="images\lotus.jpg" title="Lotus flower at Taipei Botanic Gardens" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\lotus.jpg" alt="Lotus flower at Taipei Botanic Gardens"></a>
+            <a href="images\longshan-temple.jpg" title="Lungshan Temple" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\longshan-temple.jpg" alt="Lungshan Temple"></a>
+            <a href="images\longshan-temple-2.jpg" title="Lungshan Temple" class="thumbnail med landscape photo-grid"><img
+                    class="landscape" src="images\longshan-temple-2.jpg" alt="Lungshan Temple"></a>
+            <a href="images\longshan-temple-3.jpg" title="Lungshan Temple" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\longshan-temple-3.jpg" alt="Lungshan Temple"></a>
+            <a href="images\longshan-temple-4.jpg" title="Lungshan Temple" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\longshan-temple-4.jpg" alt="Lungshan Temple"></a>
+            <a href="images\huaxi-street.jpg" title="Huaxi Street" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\huaxi-street.jpg" alt="Huaxi Street"></a>
+            <a href="images\dihua-street-lanterns.jpg" title="Lao Mian Cheng Lantern Shop, Dihua Street" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\dihua-street-lanterns.jpg" alt="Lao Mian Cheng Lantern Shop, Dihua Street"></a>
+            <a href="images\dihua-street-1.jpg" title="Dihua Street" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\dihua-street-1.jpg" alt="Dihua Street"></a>
+            <a href="images\dihua-street-2.jpg" title="Dihua Street" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\dihua-street-2.jpg" alt="Dihua Street"></a>
+            <a href="images\chiang-kai-shek-1.jpg" title="Near Chiang Kai-shek Memorial" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\chiang-kai-shek-1.jpg" alt="Near Chiang Kai-shek Memorial"></a>
+            <a href="images\chiang-kai-shek-2.jpg" title="Near Chiang Kai-shek Memorial" class="thumbnail med landscape photo-grid"><img
+                    class="landscape" src="images\chiang-kai-shek-2.jpg" alt="Near Chiang Kai-shek Memorial"></a>
+            <a href="images\architect-hirata-akira-jut-museum.jpg" title="Human Nature by Akihisa Hirata, Jut Art Museum"
+                class="thumbnail sml portrait photo-grid"><img class="portrait" src="images\architect-hirata-akira-jut-museum.jpg"
+                    alt="Human Nature by Akihisa Hirata, Jut Art Museum"></a>
+            <a href="images\taipei-museum-1.jpg" title="National Palace Museum" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-museum-1.jpg" alt="National Palace Museum"></a>
+            <a href="images\taipei-museum-2.jpg" title="National Palace Museum" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\taipei-museum-2.jpg" alt="National Palace Museum"></a>
+            <a href="images\taipei-museum-3.jpg" title="National Palace Museum" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\taipei-museum-3.jpg" alt="National Palace Museum"></a>
+            <a href="images\taipei-museum-4.jpg" title="National Palace Museum" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-museum-4.jpg" alt="National Palace Museum"></a>
+            <a href="images\taipei-museum-5.jpg" title="National Palace Museum" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\taipei-museum-5.jpg" alt="National Palace Museum"></a>
+            <a href="images\taipei-museum-6.jpg" title="National Palace Museum" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-museum-6.jpg" alt="National Palace Museum"></a>
+            <a href="images\elephant-mountain-view.jpg" title="View from Elephant Mountain" class="thumbnail med portrait photo-grid"><img
+                    class="portrait" src="images\elephant-mountain-view.jpg" alt="View from Elephant Mountain"></a>
+            <a href="images\taipei-header.jpg" title="View from Elephant Mountain" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\taipei-header.jpg" alt="View from Elephant Mountain"></a>
+            <a href="images\furry-caterpillar.jpg" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\furry-caterpillar.jpg" alt="A furry caterpillar"></a>
+            <a href="images\taipei-hospital.jpg" title="Taipei City Hospital" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-hospital.jpg" alt="Taipei City Hospital"></a>
+            <a href="images\taipei-101-inside.jpg" title="Inside Taipei 101" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-101-inside.jpg" alt="Inside Taipei 101"></a>
+            <a href="images\taipei-101-view-1.jpg" title="View from Taipei 101" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\taipei-101-view-1.jpg" alt="View from Taipei 101"></a>
+            <a href="images\taipei-101-view-2.jpg" title="View from Taipei 101" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\taipei-101-view-2.jpg" alt="View from Taipei 101"></a>
+            <a href="images\juifen-scenic.jpg" title="Juifen" class="thumbnail med landscape photo-grid"><img class="landscape"
+                    src="images\juifen-scenic.jpg" alt="Juifen"></a>
+            <a href="images\juifen-burial.jpg" title="Juifen" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\juifen-burial.jpg" alt="Juifen"></a>
+            <a href="images\juifen-lanterns.jpg" title="Juifen" class="thumbnail med portrait photo-grid"><img class="portrait"
+                    src="images\juifen-lanterns.jpg" alt="Juifen"></a>
+            <a href="images\juifen-restaurant.jpg" title="Juifen" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\juifen-restaurant.jpg" alt="Juifen"></a>
+            <a href="images\juifen-shopping.jpg" title="Juifen" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\juifen-shopping.jpg" alt="Juifen"></a>
+            <a href="images\juifen-temple.jpg" title="Juifen" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\juifen-temple.jpg" alt="Juifen"></a>
+            <a href="images\juifen-temple-altar.jpg" title="Juifen" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\juifen-temple-altar.jpg" alt="Juifen"></a>
+            <a href="images\juifen-town.jpg" title="Juifen" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\juifen-town.jpg" alt="Juifen"></a>
+            <a href="images\keelung-mountain-view.jpg" title="View from Keelung Mountain, near Juifen" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\keelung-mountain-view.jpg" alt="View from Keelung Mountain, near Juifen"></a>
+            <a href="images\maokong.jpg" title="View from Maokong Gondala, near Taipei Zoo" class="thumbnail med landscape photo-grid"><img class="landscape"
+                    src="images\maokong.jpg" alt="View from Maokong Gondala, near Taipei Zoo"></a>
+            <a href="images\yinhe-cave-waterfall.jpg" title="Yinhe Cave Waterfall" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\yinhe-cave-waterfall.jpg" alt="Yinhe Cave Waterfall"></a>
+            <a href="images\maokong-view.jpg" title="View from Maokong" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\maokong-view.jpg" alt="View from Maokong"></a>
+            <a href="images\maokong-taipei-view.jpg" title="View from Maokong" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\maokong-taipei-view.jpg" alt="View from Maokong"></a>
+            <a href="images\yinhe-cave-waterfall-2.jpg" title="Yinhe Cave Waterfall" class="thumbnail sml portrait photo-grid"><img
+                    class="portrait" src="images\yinhe-cave-waterfall-2.jpg" alt="Yinhe Cave Waterfall"></a>
+            <a href="images\yinhe-cave-waterfall-3.jpg" title="Yinhe Cave Waterfall" class="thumbnail sml landscape photo-grid"><img
+                    class="landscape" src="images\yinhe-cave-waterfall-3.jpg" alt="Yinhe Cave Waterfall"></a>
+            <a href="images\jungle.jpg" title="Maokong" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\jungle.jpg" alt="Maokong"></a>
+            <a href="images\bamboo.jpg" title="Maokong" class="thumbnail sml landscape photo-grid"><img class="landscape"
+                    src="images\bamboo.jpg" alt="Maokong"></a>
+            <a href="images\taipei-street-5.jpg" class="thumbnail sml portrait photo-grid"><img class="portrait"
+                    src="images\taipei-street-5.jpg" alt="Taipei"></a>
+
+        </section>
+    </div>
+
+    <!-- http://web.simmons.edu/~grovesd/comm244/notes/week13/magnific/magnific -->
+    <script src="jquery.js"></script>
+    <script src="jquery.magnific-popup.js"></script>
+
+
+    <script src="taipei-main.js"></script>
+</body>
+
+</html>
