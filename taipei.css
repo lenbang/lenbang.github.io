@@ -127,7 +127,7 @@ li {
 }
 
 #mapid { 
-    margin: 10vh 10px 10vh 10px;
+    margin: 10vh 10px 10px 10px;
     display: block;
     height: 40vh; 
     width: auto;
@@ -223,7 +223,7 @@ svg:hover {
     }
 }
 
-@media (max-width: 1000px) { /* mob */
+@media (max-width: 900px) { /* mob */
 
     .the-grid {
         display: grid;
@@ -236,9 +236,7 @@ svg:hover {
 
     .byline {
         font-size: 0.7rem;
-        padding: 6vh 10px 5px 10px;
-        line-height: 1.5;
-        letter-spacing: 0.15rem;
+        padding: 0px 10px 15px 10px;
         /* margin: auto 0;
         padding-top: 10vh;
         width: 100%;
@@ -248,6 +246,11 @@ svg:hover {
         text-align: center;
         font-weight: 400;
         color: white; */
+    }
+
+    .h1 {
+    padding-left: 10px;
+    padding-right: 10px;
     }
 
     #mapid { 
