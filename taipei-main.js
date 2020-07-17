@@ -45,12 +45,24 @@ targets.forEach(function (target) {
 });
 ////end https://cssanimation.rocks/scroll-animations/
 
-$(document).ready(function () {
-
+const startScroll = function() {
+  mymap.setView([25.04780, 121.53190], 2);
   mymap.flyTo([25.0384555, 121.5593295], 11, {
     duration: 6,
     easeLinearity: 0.25
   });
+}
+
+const observer2 = new IntersectionObserver(startScroll);
+
+const targets2 = document.querySelectorAll("#mapid");
+targets2.forEach(function (target2) {
+  observer2.observe(target2);
+});
+
+$(document).ready(function () {
+
+
 
   $('.the-grid').magnificPopup({
     //  type: 'image',
