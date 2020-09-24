@@ -1,0 +1,86 @@
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+    /* background-color: #f2f2f2; */
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #f14d6f;
+    --secondary-color: #9879bd;
+    --yardstick-yellow: #ffc600;
+    --light-grey: #aaaaaa;
+    /* 70% */
+    --lighter-grey: #c7c7c7;
+    /* 80% */
+
+    --dark-grey: #474747;
+    /* 30% */
+    --darker-grey: #313131;
+    /* 20% */
+    font-size: 16px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+h1.yardstick {
+    text-transform: none;
+    font-family: 'Lobster', cursive;
+    color: var(--yardstick-yellow);
+    letter-spacing: 0.05rem;
+    font-size: 5rem;
+    width: 20rem;
+    margin: 0 0 1vh 0;
+    font-weight: 200;
+}
+
+.text-box {
+    position: absolute;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 50vw;
+    z-index: 1;
+}
+
+.yardstick-l1 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 auto 1vh auto;
+    color: white;
+    line-height: 1.5;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.yardstick-l2 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0 auto 0 auto;
+    color: white;
+    line-height: 1.3;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+}
+
+.splash-img {
+width: 100%;
+}
+
+.scrim {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
