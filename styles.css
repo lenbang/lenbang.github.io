@@ -279,8 +279,8 @@ img {
 .img-feature {
     max-width: 800px;
     /* margin: auto; */
-    margin-right: auto;
-    padding: 40px 20px 0px 0px;
+    /* margin-right: auto; */
+    /* padding: 40px 20px 0px 0px; */
 }
 
 hr {
@@ -297,11 +297,17 @@ hr {
     padding: 40px 20px 10px 0px;
 }
 
-@media (max-width: 1040px) {
+/* @media (max-width: 1040px) {
     .proj-txt {
         padding: 0px 20px 10px 20px;
     }
 }
+
+@media (max-width: 1040px) {
+    .feature {
+        padding: 0px 20px 10px 20px;
+    }
+} */
 
 .aspect-box {
     height: 0;
@@ -313,6 +319,12 @@ hr {
 .project {
     max-width: 1000px;
     margin: auto;
+}
+
+@media (max-width: 1040px) {
+    .project {
+        padding: 0px 20px 10px 20px;
+    }
 }
 
 iframe {
