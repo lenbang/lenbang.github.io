@@ -29,6 +29,7 @@ body {
 header {
     max-width: 1000px;
     margin: 90px auto 90px auto;
+    z-index: 1;
 }
 
 .nav {
@@ -84,16 +85,35 @@ li {
     margin: 0;
     padding: 0;
     list-style: none;
+    list-style-position: outside;
 }
 
-.a-list {
+/* https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+
+/* .a-list {
     line-height: 1.5;
-    margin-left: 50px;
-    padding-left: 15px;
+    margin-left: 20px;
+    padding-left: 10px;
     list-style: disc;
+} */
+
+table {
+    line-height: 1.5;
 }
 
+td {
+    vertical-align: top;
+    margin-bottom: 3px;
+}
 
+.square {
+    height: 10px;
+    width: 10px;
+    background-color: var(--main-color);
+    position: relative;
+    top: 8px;
+    margin-right: 5px;
+}
 
 .proj-grid {
     display: grid;
@@ -169,9 +189,9 @@ h1 {
     color: black;
     /* color: var(--yardstick-yellow); */
     /* background: black; */
-    line-height: 1.5;
+    line-height: 1.1;
     font-size: 1.2em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     font-weight: 400;
     text-align: center;
 }
@@ -183,7 +203,7 @@ h1.yardstick {
     letter-spacing: 0.05rem;
     font-size: 5rem;
     width: 20rem;
-    margin: 35vh 0 1vh 0;
+    margin: 30vh 0 1vh 0;
     font-weight: 200;
 }
 
@@ -197,7 +217,7 @@ h1.yardstick {
 }
 
 .yardstick-title {
-    position: relative;
+    /* position: relative; */
 }
 
 .yardstick-l1 {
@@ -239,16 +259,16 @@ h2 {
 
 
 h3 {
-    padding: 40px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 @media (max-width: 720px) {
     header {
-        margin: 5px auto 5px auto;
+        margin: 10px auto 10px auto;
     }
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 3.6rem;
     }
 
     .nav {
@@ -261,12 +281,14 @@ h3 {
     }
 
     .nav-flex {
-        /* flex-direction: column; */
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 
     .nav-item {
-        /* text-align: right; */
-        /* padding: 0px 10px 0px 10px; */
+        text-align: left;
+        margin-right: 20px;
+        /* padding: 2px 10px 2px 0px; */
     }
 }
 
@@ -278,6 +300,7 @@ img {
 
 .img-feature {
     max-width: 800px;
+    margin-top: 40px;
     /* margin: auto; */
     /* margin-right: auto; */
     /* padding: 40px 20px 0px 0px; */
@@ -294,7 +317,7 @@ hr {
 .proj-txt {
     max-width: 500px;
     margin-right: auto;
-    padding: 40px 20px 10px 0px;
+    padding: 20px 20px 10px 0px;
 }
 
 /* @media (max-width: 1040px) {
@@ -324,6 +347,16 @@ hr {
 @media (max-width: 1040px) {
     .project {
         padding: 0px 20px 10px 20px;
+
+    }
+    .yardstick.project {
+        position: absolute;
+        top: 30vh;
+        /* position: relative;
+        bottom: 50px; */
+    }
+    h1.yardstick {
+        margin-top: 10vh;
     }
 }
 
