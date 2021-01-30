@@ -341,7 +341,7 @@ hr {
 .proj-txt {
     max-width: 500px;
     margin-right: auto;
-    padding: 20px 0px 10px 0px;
+    padding: 20px 0px 10px 10px;
 }
 
 /* @media (max-width: 1040px) {
@@ -378,7 +378,7 @@ hr {
         position: absolute;
         /* top: 30vh; */
         bottom: 20px;
-        left: 20px;
+        left: 10px;
         /* position: relative;
         bottom: 50px; */
     }
