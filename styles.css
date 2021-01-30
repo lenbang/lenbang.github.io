@@ -341,7 +341,7 @@ hr {
 .proj-txt {
     max-width: 500px;
     margin-right: auto;
-    padding: 20px 0px 10px 10px;
+    padding: 20px 0px 10px 0px;
 }
 
 /* @media (max-width: 1040px) {
@@ -368,10 +368,16 @@ hr {
     margin: auto;
 }
 
+.yardstick.project {
+    position: relative;
+    bottom: 10vh;
+/* padding-bottom: 10vh; */
+}
+
 /* if width < */
 @media (max-width: 1040px) {
     .project {
-        padding: 0px 10px 10px 0px;
+        padding: 0px 10px 10px 10px;
 
     }
     .yardstick.project {
